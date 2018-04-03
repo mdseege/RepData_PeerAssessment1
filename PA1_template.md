@@ -6,7 +6,32 @@
 ```r
 unzip.act <- unzip('activity.zip')
 act <- read.csv(unzip.act)
-library(dplyr)
+library(tidyverse)
+```
+
+```
+## Warning: package 'tidyverse' was built under R version 3.3.3
+```
+
+```
+## Loading tidyverse: ggplot2
+## Loading tidyverse: tibble
+## Loading tidyverse: tidyr
+## Loading tidyverse: readr
+## Loading tidyverse: purrr
+## Loading tidyverse: dplyr
+```
+
+```
+## Warning: package 'ggplot2' was built under R version 3.3.3
+```
+
+```
+## Warning: package 'tibble' was built under R version 3.3.3
+```
+
+```
+## Warning: package 'readr' was built under R version 3.3.3
 ```
 
 ```
@@ -14,36 +39,18 @@ library(dplyr)
 ```
 
 ```
-## 
-## Attaching package: 'dplyr'
+## Conflicts with tidy packages ----------------------------------------------
 ```
 
 ```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
+## filter(): dplyr, stats
+## lag():    dplyr, stats
 ```
 
 ```r
+library(dplyr)
 library(ggplot2)
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 3.3.3
-```
-
-```r
 library(readr)
-```
-
-```
-## Warning: package 'readr' was built under R version 3.3.3
 ```
 
 
@@ -63,9 +70,10 @@ ggplot(act.sum.sum, mapping = aes(x = steps))+
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
-The mean number of steps taken each day is 'mean(act.sum.sum$steps, na.rm = TRUE)'.
 
-The median number of steps taken each day is 'median(act.sum.sum$steps, na.rm = TRUE)'.
+The mean number of steps taken each day is 10766.
+
+The median number of steps taken each day is 10765.
 
 ## What is the average daily activity pattern?
 
@@ -83,7 +91,9 @@ ggplot(data = act.sum.mean, mapping = aes(x = interval, y = steps))+
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
-The 5-minute interval, on average across all the days in the dataset,that contains the maximum number of steps is'max.int'.
+
+The 5-minute interval, on average across all the days in the dataset,that contains the maximum number of steps is 835.
+
 ## Imputing missing values
 
 ```r
@@ -101,7 +111,7 @@ incomplete <- sum(!complete.cases(act))
 #this code summarizes the dataset with zeros instead of NAs
 imp.act.sum <- summarize(group_by(imp.act, date), steps = sum(steps))
 ```
-The total number of missing values in the dataset is 'incomplete'.
+The total number of missing values in the dataset is 2304.
 
 I decided to replace any NA with a zero.
 
@@ -114,9 +124,10 @@ ggplot(imp.act.sum, mapping = aes(x = steps))+
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
-The mean number of steps taken each day with zeros instead of NA is 'mean(imp.sum.sum$steps, na.rm = TRUE)'.
 
-The median number of steps taken each day with zeros instead of NA is 'median(imp.sum.sum$steps, na.rm = TRUE)'.
+The mean number of steps taken each day with zeros instead of NA is 9354.
+
+The median number of steps taken each day with zeros instead of NA is 10395.
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
