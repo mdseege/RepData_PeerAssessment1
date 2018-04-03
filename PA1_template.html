@@ -187,7 +187,7 @@ imp.act.sum &lt;- summarize(group_by(imp.act, date), steps = sum(steps))</code><
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
-<p>Here is a time series plot of the average number of steps taken faceted by weekday or weekend</p>
+<p>Here is a time series plot of the average number of steps taken faceted by weekday or weekend.</p>
 <pre class="r"><code>#this is the calculation for the total number of steps taken per day with zeros instead of NA.
 imp.act.sum &lt;- summarize(group_by(imp.act, date), steps = sum(steps))
 

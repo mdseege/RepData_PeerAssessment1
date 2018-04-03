@@ -131,7 +131,7 @@ The median number of steps taken each day with zeros instead of NA is 10395.
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
-Here is a time series plot of the average number of steps taken faceted by weekday or weekend
+Here is a time series plot of the average number of steps taken faceted by weekday or weekend.
 
 ```r
 #this is the calculation for the total number of steps taken per day with zeros instead of NA.
