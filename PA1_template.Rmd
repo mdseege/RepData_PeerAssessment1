@@ -30,7 +30,7 @@ ggplot(act.sum.sum, mapping = aes(x = steps))+
   labs(title = "TOTAL STEPS PER DAY", x = "NUMBER OF STEPS")
 ```
 
-The mean number of steps taken each day is `r as.integer(mean(act.sum.sum$steps, na.rm = TRUE))`.
+The mean number of steps taken each day is `r as.integer(mean(act.sum.sum$steps, na.rm = TRUE))`. 
 
 The median number of steps taken each day is `r as.integer(median(act.sum.sum$steps, na.rm = TRUE))`.
 
