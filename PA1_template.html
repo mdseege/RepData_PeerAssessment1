@@ -124,20 +124,24 @@ $(document).ready(function () {
 <h2>Loading and preprocessing the data</h2>
 <pre class="r"><code>unzip.act &lt;- unzip('activity.zip')
 act &lt;- read.csv(unzip.act)
-library(dplyr)</code></pre>
-<pre><code>## Warning: package 'dplyr' was built under R version 3.3.3</code></pre>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
+library(tidyverse)</code></pre>
+<pre><code>## Warning: package 'tidyverse' was built under R version 3.3.3</code></pre>
+<pre><code>## Loading tidyverse: ggplot2
+## Loading tidyverse: tibble
+## Loading tidyverse: tidyr
+## Loading tidyverse: readr
+## Loading tidyverse: purrr
+## Loading tidyverse: dplyr</code></pre>
 <pre><code>## Warning: package 'ggplot2' was built under R version 3.3.3</code></pre>
-<pre class="r"><code>library(readr)</code></pre>
+<pre><code>## Warning: package 'tibble' was built under R version 3.3.3</code></pre>
 <pre><code>## Warning: package 'readr' was built under R version 3.3.3</code></pre>
+<pre><code>## Warning: package 'dplyr' was built under R version 3.3.3</code></pre>
+<pre><code>## Conflicts with tidy packages ----------------------------------------------</code></pre>
+<pre><code>## filter(): dplyr, stats
+## lag():    dplyr, stats</code></pre>
+<pre class="r"><code>library(dplyr)
+library(ggplot2)
+library(readr)</code></pre>
 </div>
 <div id="what-is-mean-total-number-of-steps-taken-per-day" class="section level2">
 <h2>What is mean total number of steps taken per day?</h2>

@@ -6,7 +6,32 @@
 ```r
 unzip.act <- unzip('activity.zip')
 act <- read.csv(unzip.act)
-library(dplyr)
+library(tidyverse)
+```
+
+```
+## Warning: package 'tidyverse' was built under R version 3.3.3
+```
+
+```
+## Loading tidyverse: ggplot2
+## Loading tidyverse: tibble
+## Loading tidyverse: tidyr
+## Loading tidyverse: readr
+## Loading tidyverse: purrr
+## Loading tidyverse: dplyr
+```
+
+```
+## Warning: package 'ggplot2' was built under R version 3.3.3
+```
+
+```
+## Warning: package 'tibble' was built under R version 3.3.3
+```
+
+```
+## Warning: package 'readr' was built under R version 3.3.3
 ```
 
 ```
@@ -14,36 +39,18 @@ library(dplyr)
 ```
 
 ```
-## 
-## Attaching package: 'dplyr'
+## Conflicts with tidy packages ----------------------------------------------
 ```
 
 ```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
+## filter(): dplyr, stats
+## lag():    dplyr, stats
 ```
 
 ```r
+library(dplyr)
 library(ggplot2)
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 3.3.3
-```
-
-```r
 library(readr)
-```
-
-```
-## Warning: package 'readr' was built under R version 3.3.3
 ```
 
 
