@@ -71,7 +71,7 @@ ggplot(act.sum.sum, mapping = aes(x = steps))+
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
-The mean number of steps taken each day is 10766.
+The mean number of steps taken each day is 10766. 
 
 The median number of steps taken each day is 10765.
 
