@@ -42,7 +42,7 @@ act.sum.mean <- summarize(group_by(act, interval), steps = mean(steps, na.rm = T
 max.int <- act.sum.mean[which.max(act.sum.mean$steps),1]
 
 ```
-Here is a time series plot of the average number of steps taken
+Here is a time series plot of the average number of steps taken.
 ```{r}
 ggplot(data = act.sum.mean, mapping = aes(x = interval, y = steps))+
   geom_line()

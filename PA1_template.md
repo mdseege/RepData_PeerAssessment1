@@ -60,7 +60,7 @@ library(readr)
 ```r
 act.sum.sum <- summarize(group_by(act, date), steps = sum(steps))
 ```
-Here is a histogram of the total number of steps taken each day
+Here is a histogram of the total number of steps taken each day.
 
 
 ```r
@@ -83,7 +83,7 @@ act.sum.mean <- summarize(group_by(act, interval), steps = mean(steps, na.rm = T
 #this code finds the time interval with the maximum average steps 
 max.int <- act.sum.mean[which.max(act.sum.mean$steps),1]
 ```
-Here is a time series plot of the average number of steps taken
+Here is a time series plot of the average number of steps taken.
 
 ```r
 ggplot(data = act.sum.mean, mapping = aes(x = interval, y = steps))+
