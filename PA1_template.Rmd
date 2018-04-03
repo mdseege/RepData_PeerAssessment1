@@ -22,7 +22,7 @@ library(readr)
 ```{r}
 act.sum.sum <- summarize(group_by(act, date), steps = sum(steps))
 ```
-Here is a histogram of the total number of steps taken each day
+Here is a histogram of the total number of steps taken each day.
 
 ```{r}
 ggplot(act.sum.sum, mapping = aes(x = steps))+
