@@ -51,7 +51,6 @@ library(readr)
 ## What is mean total number of steps taken per day?
 
 ```r
-#this is the calculation for the total number of steps taken per day
 act.sum.sum <- summarize(group_by(act, date), steps = sum(steps))
 ```
 Here is a histogram of the total number of steps taken each day

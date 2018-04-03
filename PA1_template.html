@@ -141,8 +141,7 @@ library(dplyr)</code></pre>
 </div>
 <div id="what-is-mean-total-number-of-steps-taken-per-day" class="section level2">
 <h2>What is mean total number of steps taken per day?</h2>
-<pre class="r"><code>#this is the calculation for the total number of steps taken per day
-act.sum.sum &lt;- summarize(group_by(act, date), steps = sum(steps))</code></pre>
+<pre class="r"><code>act.sum.sum &lt;- summarize(group_by(act, date), steps = sum(steps))</code></pre>
 <p>Here is a histogram of the total number of steps taken each day</p>
 <pre class="r"><code>ggplot(act.sum.sum, mapping = aes(x = steps))+
   geom_histogram(breaks = seq.int(from = 0, to = 25000, by = 500), na.rm = TRUE)+
