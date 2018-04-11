@@ -1,6 +1,7 @@
 # Reproducible Research: Peer Assessment 1
 
 
+
 ## Loading and preprocessing the data
 
 ```r
@@ -52,6 +53,7 @@ library(dplyr)
 library(ggplot2)
 library(readr)
 ```
+
 
 
 
